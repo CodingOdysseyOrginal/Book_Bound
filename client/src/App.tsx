@@ -6,6 +6,7 @@ import Fiction from "./Pages/Fiction/Fiction";
 import GiftCards from "./Pages/GiftCards/GiftCards";
 import Homepage from "./Pages/Homepage/Homepage";
 import NonFiction from "./Pages/NonFiction/NonFiction";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/bestsellers" element={<BestSellers />} />
       </Routes>
+      <Footer/>
     </>
   );
 }
