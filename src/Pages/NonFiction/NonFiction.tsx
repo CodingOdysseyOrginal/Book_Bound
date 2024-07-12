@@ -1,8 +1,5 @@
-import React from 'react'
 
-type Props = {}
-
-const NonFiction = (props: Props) => {
+const NonFiction = () => {
   return (
     <div>NonFiction</div>
   )

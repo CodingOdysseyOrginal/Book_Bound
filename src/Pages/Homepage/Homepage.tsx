@@ -1,9 +1,8 @@
-import React from 'react';
+
 import './Homepage.css';
 
-type Props = {}
 
-const Homepage = (props: Props) => {
+const Homepage = () => {
   return (
     <section className='Container'>Homepage</section>
   )

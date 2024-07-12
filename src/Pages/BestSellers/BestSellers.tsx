@@ -1,8 +1,6 @@
-import React from "react";
 
-type Props = {};
 
-const BestSellers = (props: Props) => {
+const BestSellers = () => {
   return <div>BestSellers</div>;
 };
 
