@@ -1,0 +1,73 @@
+:root {
+    --darkRed: #8c1c13;
+    --BittersweetShimmer: #bf4342;
+    --Almond: #e7d7c1;
+    --Beaver: #a78a7f;
+  }
+  
+  .footer {
+    position: relative;
+    background-color: var(--darkRed);
+    color: var(--Almond);
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .company-info,
+  .company-description,
+  .quick-links,
+  .social-media {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .company-info h2,
+  .company-info p,
+  .company-description h3,
+  .company-description p,
+  .quick-links h3,
+  .quick-links ul,
+  .social-media h3,
+  .social-media ul {
+    margin: 10px 0;
+  }
+  
+  .quick-links ul,
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .quick-links ul li,
+  .social-media ul li {
+    margin: 5px 0;
+  }
+  
+  .quick-links ul li a,
+  .social-media ul li a {
+    color: var(--Almond);
+    text-decoration: none;
+  }
+  
+  .quick-links ul li a:hover,
+  .social-media ul li a:hover {
+    color: var(--Beaver);
+  }
+  
+  .social-media ul li a i {
+    margin-right: 8px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid var(--BittersweetShimmer);
+    padding-top: 10px;
+  }
+  
