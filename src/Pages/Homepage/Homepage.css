@@ -1,3 +1,12 @@
+:root {
+    --Vermilion: #e7473c;
+    --Orange: #ffab00;
+    --ChilliRed: #dd2e18;
+    --Black: #000000;
+    --flashWhite: #f0f0f0;
+  }
+
 .Container{
-    background-color: lightblue;
+    background-color: var(--flashWhite);
+    height: 80vh;
 }

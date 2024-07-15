@@ -1,12 +1,14 @@
 :root {
-  --darkRed: #8C1C13;
-  --BittersweetShimmer: #BF4342;
-  --Almond: #E7D7C1;
-  --Beaver: #A78A7F;
+  --Vermilion: #e7473c;
+  --Orange: #ffab00;
+  --ChilliRed: #dd2e18;
+  --Black: #000000;
+  --flashWhite: #f0f0f0;
 }
 
 @keyframes navbar-bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -19,18 +21,25 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: var(--darkRed);
+  background-color: var(--Orange);
   border-radius: 15px;
   border: 1px solid var(--Beaver);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   margin: 20px;
+  margin-top: 50px;
   transition: background-color 0.3s;
   animation: navbar-bounce 2s infinite;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav:hover {
-  background-color: var(--BittersweetShimmer);
+nav {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
 }
+
 
 .logo-container {
   display: flex;
@@ -45,8 +54,8 @@ nav:hover {
 
 .brand-name {
   font-size: 2rem;
-  color: var(--Almond);
-  font-family: 'Montserrat', sans-serif;
+  color: var(--Black);
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
 
@@ -65,24 +74,27 @@ nav:hover {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--Almond);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  color: var(--Black);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
   position: relative;
   transition: color 0.3s, transform 0.3s;
+
+
 }
 
 .nav-links a:hover {
-  color: var(--Almond);
+  color: var(--Black);
   transform: scale(1.1);
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 2px;
-  background: var(--Almond);
+  background: var(--Black);
   transition: width 0.3s;
 }
 
@@ -99,7 +111,3 @@ nav:hover {
   width: auto;
 }
 
-nav {
-  max-width: 1200px;
-  margin: auto;
-}

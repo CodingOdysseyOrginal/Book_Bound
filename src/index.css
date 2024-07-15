@@ -1,0 +1,17 @@
+:root {
+    --Vermilion: #e7473c;
+    --Orange: #ffab00;
+    --ChilliRed: #dd2e18;
+    --Black: #000000;
+    --flashWhite: #f0f0f0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+   background-color: var(--flashWhite);
+  }

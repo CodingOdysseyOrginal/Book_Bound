@@ -1,73 +1,136 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
 :root {
-    --darkRed: #8c1c13;
-    --BittersweetShimmer: #bf4342;
-    --Almond: #e7d7c1;
-    --Beaver: #a78a7f;
-  }
-  
-  .footer {
-    position: relative;
-    background-color: var(--darkRed);
-    color: var(--Almond);
-    padding: 20px;
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  .company-info,
-  .company-description,
-  .quick-links,
-  .social-media {
-    flex: 1 1 200px;
-    margin: 10px;
-  }
-  
-  .company-info h2,
-  .company-info p,
-  .company-description h3,
-  .company-description p,
-  .quick-links h3,
-  .quick-links ul,
-  .social-media h3,
-  .social-media ul {
-    margin: 10px 0;
-  }
-  
-  .quick-links ul,
-  .social-media ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .quick-links ul li,
-  .social-media ul li {
-    margin: 5px 0;
-  }
-  
-  .quick-links ul li a,
-  .social-media ul li a {
-    color: var(--Almond);
-    text-decoration: none;
-  }
-  
-  .quick-links ul li a:hover,
-  .social-media ul li a:hover {
-    color: var(--Beaver);
-  }
-  
-  .social-media ul li a i {
-    margin-right: 8px;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid var(--BittersweetShimmer);
-    padding-top: 10px;
-  }
-  
+  --vermilion: #e7473c;
+  --orange: #ffab00;
+  --chilli-red: #dd2e18;
+  --black: #000000;
+  --flash-white: #f0f0f0;
+}
+
+.footer {
+  background: var(--orange);
+  color: var(--black);
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.footer::before {
+  width: 200px;
+  height: 200px;
+  background: var(--vermilion);
+  top: -100px;
+  left: -100px;
+}
+
+.footer::after {
+  width: 300px;
+  height: 300px;
+  background: var(--chilli-red);
+  bottom: -150px;
+  right: -150px;
+}
+
+.footer::after {
+  width: 300px;
+  height: 300px;
+  background: var(--chilli-red);
+  bottom: -150px;
+  right: 150px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.company-info,
+.company-description,
+.quick-links,
+.social-media {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.company-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.company-info address,
+.company-info p,
+.company-description h3,
+.company-description p,
+.quick-links h3,
+.quick-links ul,
+.social-media h3,
+.social-media ul {
+  margin: 10px 0;
+}
+
+.quick-links ul,
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li,
+.social-media ul li {
+  margin: 5px 0;
+}
+
+.quick-links ul li a,
+.social-media ul li a {
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+  display: inline-block;
+}
+
+.quick-links ul li a:hover,
+.social-media ul li a:hover {
+  color: var(--black);
+  transform: scale(1.1);
+}
+
+.quick-links ul li a::after,
+.social-media ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--black);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+.quick-links ul li a:hover::after,
+.social-media ul li a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--black);
+  padding-top: 10px;
+  margin-top: 20px;
+}
