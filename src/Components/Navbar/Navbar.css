@@ -1,9 +1,11 @@
 :root {
-  --Vermilion: #e7473c;
-  --Orange: #ffab00;
-  --ChilliRed: #dd2e18;
-  --Black: #000000;
-  --flashWhite: #f0f0f0;
+  --vermilion: #e7473c;
+  --orange: #ffab00;
+  --chilli-red: #dd2e18;
+  --black: #000000;
+  --flash-white: #f0f0f0;
+  --yellow: #ffeb3b;
+  --lime-green: #cddc39;
 }
 
 @keyframes navbar-bounce {
@@ -21,9 +23,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: var(--Orange);
+  background-color: var(--orange);
   border-radius: 15px;
-  border: 1px solid var(--Beaver);
+  border: 1px solid var(--black);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   margin: 20px;
   margin-top: 50px;
@@ -31,15 +33,63 @@ nav {
   animation: navbar-bounce 2s infinite;
   position: sticky;
   top: 0;
-  z-index: 1000;
-}
-
-nav {
+  z-index: 999; 
   max-width: 1200px;
   margin: auto;
   margin-top: 30px;
+  overflow: hidden;
 }
 
+nav::before,
+nav::after,
+nav .color-spot-1,
+nav .color-spot-2,
+nav .color-spot-3 {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+nav::before {
+  width: 150px;
+  height: 150px;
+  background: var(--chilli-red);
+  top: 10px;
+  left: 120px;
+}
+
+nav::after {
+  width: 150px;
+  height: 150px;
+  background: var(--lime-green);
+  bottom: -75px;
+  right: -75px;
+}
+
+nav .color-spot-1 {
+  width: 100px;
+  height: 100px;
+  background: var(--chilli-red);
+  top: 20px;
+  right: 300px;
+}
+
+nav .color-spot-2 {
+  width: 60px;
+  height: 60px;
+  background: var(--lime-green);
+  bottom: 30px;
+  left: 30px;
+}
+
+nav .color-spot-3 {
+  width: 70px;
+  height: 70px;
+  background: var(--flash-white);
+  top: 60px;
+  left: 100px;
+}
 
 .logo-container {
   display: flex;
@@ -54,7 +104,7 @@ nav {
 
 .brand-name {
   font-size: 2rem;
-  color: var(--Black);
+  color: var(--black);
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
@@ -74,18 +124,16 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--Black);
+  color: var(--black);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   position: relative;
   transition: color 0.3s, transform 0.3s;
-
-
 }
 
 .nav-links a:hover {
-  color: var(--Black);
+  color: var(--black);
   transform: scale(1.1);
 }
 
@@ -94,7 +142,7 @@ nav {
   display: block;
   width: 0;
   height: 2px;
-  background: var(--Black);
+  background: var(--black);
   transition: width 0.3s;
 }
 
@@ -111,3 +159,90 @@ nav {
   width: auto;
 }
 
+.menu-icon {
+  display: none; 
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 5px;
+  background-color: var(--black);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.move .line1 {
+  transform: rotate(-55deg) translate(-13px, 6px);
+}
+
+.move .line2 {
+  opacity: 0;
+}
+
+.move .line3 {
+  transform: rotate(46deg) translate(-10px, -6px);
+}
+
+
+/* Sidebar CSS */
+.sidebar {
+  position: fixed;
+  top: 10;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--flash-white);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  padding: 15px 20px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-icon {
+    display: flex;
+  }
+  
+ 
+  nav{
+    animation: none;
+    border-radius: 0%;
+    margin: 0;
+    
+  }
+}

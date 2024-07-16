@@ -6,6 +6,8 @@
   --chilli-red: #dd2e18;
   --black: #000000;
   --flash-white: #f0f0f0;
+  --yellow: #ffeb3b;
+  --lime-green: #cddc39;
 }
 
 .footer {
@@ -23,7 +25,10 @@
 }
 
 .footer::before,
-.footer::after {
+.footer::after,
+.footer .color-spot-1,
+.footer .color-spot-2,
+.footer .color-spot-3 {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -46,12 +51,28 @@
   right: -150px;
 }
 
-.footer::after {
-  width: 300px;
-  height: 300px;
+.footer .color-spot-1 {
+  width: 150px;
+  height: 150px;
+  background: var(--vermilion);
+  top: 50px;
+  right: 50px;
+}
+
+.footer .color-spot-2 {
+  width: 150px;
+  height: 150px;
+  background: var(--vermilion);
+  bottom: 50px;
+  left: 100px;
+}
+
+.footer .color-spot-3 {
+  width: 220px;
+  height: 220px;
   background: var(--chilli-red);
-  bottom: -150px;
-  right: 150px;
+  top: 150px;
+  left: 400px;
 }
 
 .footer-content {
@@ -81,7 +102,7 @@
 .quick-links h3,
 .quick-links ul,
 .social-media h3,
-.social-media ul {
+-social-media ul {
   margin: 10px 0;
 }
 
