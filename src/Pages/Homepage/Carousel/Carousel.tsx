@@ -1,8 +1,11 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Link } from 'react-router-dom';  // Import Link
 import './Carousel.css';
 import CrackCode from '../imgs/CrackTheInterview.webp';
+import Dune from '../imgs/Dune.webp';
+import WillSaveTheGalaxyForCash from "../imgs/WillDestoryTheGalaxyForCash.jpg";
 
 const CarouselComponent: React.FC = () => {
   return (
@@ -12,19 +15,30 @@ const CarouselComponent: React.FC = () => {
       showStatus={false}
     >
       <div className='HomePageSlide1'>
-        <div className='Slide1Image'><img src={CrackCode} alt="Crack the Interview" /></div>
+        <Link to="#" className='Slide1Image'> 
+          <img src={CrackCode} alt="Crack the Interview" />
+        </Link>
         <div className='Slide1Info'>
-          <h1>Cracking the coding interview</h1>
+          <h1>Cracking the Coding Interview</h1>
           <p>How to crack the coding quiz!</p>
-          <button>Shop Now</button>
+          <Link to="#"><button>Shop Now</button></Link> 
         </div>
       </div>
-      <div>
-        <img src="path/to/your/image2.jpg" alt="Slide 2" />
-        <p className="legend">Slide 2</p>
+
+      <div className='HomePageSlide2'>
+        <Link to="#" className='Slide2Image'> 
+          <img src={Dune} alt="Dune" />
+        </Link>
+        <div className='Slide2Info'>
+          <h1>Explore the world of Fiction</h1>
+          <Link to="/Book_Bound/fiction"><button>Explore Now</button></Link> 
+        </div>
+        <Link to="#" className='Slide2Image'>
+          <img src={WillSaveTheGalaxyForCash} alt="Will Save the Galaxy for Cash" />
+        </Link>
       </div>
-      <div>
-        <img src="path/to/your/image3.jpg" alt="Slide 3" />
+
+      <div className='HomePageSlide3'>
         <p className="legend">Slide 3</p>
       </div>
     </Carousel>

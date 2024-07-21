@@ -21,6 +21,7 @@ function App() {
         <Route path="/Book_Bound/bestsellers" element={<BestSellers />} />
       </Routes>
       <Footer/>
+      
     </>
   );
 }

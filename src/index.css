@@ -1,21 +1,20 @@
 :root {
-    --Vermilion: #e7473c;
-    --Orange: #ffab00;
-    --ChilliRed: #dd2e18;
-    --Black: #000000;
-    --flashWhite: #f0f0f0;
-  }
+  --Vermilion: #e7473c;
+  --Orange: #ffab00;
+  --ChilliRed: #dd2e18;
+  --Black: #000000;
+  --flashWhite: #f0f0f0;
+}
 
-  * {
-    font-family: 'poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-      max-width: 1200px; /* Max width */
-      margin: 0 auto; /* Center the carousel */
-      
-  }
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
 
-  body {
-   background-color: var(--flashWhite);
-  }
+body {
+  background-color: var(--flashWhite);
+}
