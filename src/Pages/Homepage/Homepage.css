@@ -8,5 +8,5 @@
 
 .Container{
     background-color: var(--flashWhite);
-    height: 80vh;
+    height:auto;
 }

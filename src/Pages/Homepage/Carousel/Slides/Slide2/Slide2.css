@@ -1,0 +1,58 @@
+.HomePageSlide2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-image: url("../../../imgs/spaceBG.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  height: 100%;
+}
+
+.Slide2Image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Slide2Image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Slide2Info {
+  flex: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.Slide2Info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Slide2Info button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 30px;
+  font-size: 1.8rem;
+  color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.Slide2Info button:hover {
+  background-color: #e5533d;
+  transform: scale(1.05);
+}
