@@ -1,40 +1,75 @@
+:root {
+  --Vermilion: #e7473c;
+  --Orange: #ffab00;
+  --ChilliRed: #dd2e18;
+  --Black: #000000;
+  --flashWhite: #f0f0f0;
+}
 .HomePageSlide3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color:var(--Orange);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: black;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--Orange);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+  height: 100%;
 }
 
-.Slide3Left, .Slide3Right {
-    display: flex;
-    flex-direction: row;
-    gap: 10px; 
+.Slide3Left,
+.Slide3Right {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  transform: rotate(-45deg);
 }
 
-.Slide3Left img, .Slide3Right img {
-    width: 250px; 
-    height: 250px; 
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.Slide3Left img,
+.Slide3Right img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
 }
 
-.Slide3Left img:hover, .Slide3Right img:hover {
-    transform: scale(1.05);
+.Slide3Left img:hover,
+.Slide3Right img:hover {
+  transform: scale(1.05);
 }
 
 .Slide3Center {
-    flex: 1;
-    text-align: center;
+  text-align: center;
 }
 
 .Slide3Center h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 3;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .HomePageSlide3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .Slide3Center h1 {
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+  .Slide3Left {
+    transform: rotate(0deg);
+    width: 100%;
+    height: 100px;
+  }
+  .Slide3Right {
+    transform: rotate(0deg);
+    width: 100%;
+    height: 100px;
+  }
 }
