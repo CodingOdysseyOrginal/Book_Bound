@@ -110,6 +110,10 @@
     background: dodgerblue;
     color: white;
   }
+  .button.added {
+    background: dodgerblue;
+    color: white;
+  }
   
   @keyframes stretchIn {
     from {

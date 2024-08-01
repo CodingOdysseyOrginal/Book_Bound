@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import BestSellers from './Pages/BestSellers/BestSellers';
@@ -9,10 +8,13 @@ import Homepage from './Pages/Homepage/Homepage';
 import NonFiction from './Pages/NonFiction/NonFiction';
 import Footer from './Components/Footer/Footer';
 import BookPage from './Pages/BookPage/BookPage';
+import { CartProvider } from './Components/CartContext/CartContext'; 
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
-    <>
+    <CartProvider>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/Book_Bound/" element={<Homepage />} />
@@ -24,7 +26,7 @@ function App() {
         <Route path="/product/:id" element={<BookPage />} />
       </Routes>
       <Footer />
-    </>
+    </CartProvider>
   );
 }
 

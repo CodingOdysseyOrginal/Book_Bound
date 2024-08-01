@@ -4,9 +4,17 @@ import ProgressBar from "../ProgessBar/ProgressBar";
 import Logo from "./img/Logo.svg";
 import cart from "./img/Cart.svg";
 import "./Navbar.css";
+import { useCart } from "../CartContext/CartContext"; 
 
 const Navbar: React.FC = () => {
   const [menuActive, setMenuActive] = useState(false);
+  const { state } = useCart(); 
+
+ 
+  const totalItemsInCart = state.items.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -69,6 +77,9 @@ const Navbar: React.FC = () => {
           <li>
             <Link to="/Book_Bound/cart" className="cart-icon">
               <img src={cart} alt="Cart" />
+              {totalItemsInCart > 0 && (
+                <span className="cart-counter">{totalItemsInCart}</span>
+              )}
             </Link>
           </li>
         </ul>
@@ -88,6 +99,14 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
+  const { state } = useCart(); // Use the CartContext to access cart state
+
+  // Calculate the total number of items in the cart
+  const totalItemsInCart = state.items.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <ul className="sidebar-links">
@@ -109,14 +128,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           </Link>
         </li>
         <hr className="sidebar-divider" />
-
         <li>
           <Link to="/Book_Bound/giftcards" onClick={toggleSidebar}>
             Gift Cards
           </Link>
         </li>
         <hr className="sidebar-divider" />
-
         <li>
           <Link
             to="/Book_Bound/cart"
@@ -124,10 +141,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             onClick={toggleSidebar}
           >
             <img src={cart} alt="Cart" />
+            {totalItemsInCart > 0 && (
+              <span className="cart-counter">{totalItemsInCart}</span>
+            )}
           </Link>
         </li>
       </ul>
-       
     </div>
   );
 };
