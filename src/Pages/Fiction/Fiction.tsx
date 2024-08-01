@@ -1,6 +1,6 @@
-
+import './Fiction.css';
 const Fiction = () => {
-  return <div>Fiction</div>;
+  return <div className='FictionContainer'>Fiction</div>;
 };
 
 export default Fiction;

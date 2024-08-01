@@ -9,4 +9,5 @@
 .Container{
     background-color: var(--flashWhite);
     height:auto;
+    max-width: 1200px;
 }
