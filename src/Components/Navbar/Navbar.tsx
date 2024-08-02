@@ -99,9 +99,8 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
-  const { state } = useCart(); // Use the CartContext to access cart state
-
-  // Calculate the total number of items in the cart
+  const { state } = useCart(); 
+  
   const totalItemsInCart = state.items.reduce(
     (total, item) => total + item.quantity,
     0

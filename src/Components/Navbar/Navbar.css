@@ -257,15 +257,8 @@ nav .color-spot-3 {
   font-size: 12px;
 }
 
-
-
 @media (max-width: 768px) {
-  .menu-icon {
-    display: flex;
-  }
-}
 
-@media (max-width: 768px) {
   .nav-links {
     display: none;
   }
@@ -276,6 +269,15 @@ nav .color-spot-3 {
   nav{
     animation: none;
     margin: 0;
-    
   }
+.cart-counter{
+  right: 172px;
+}
+strong{
+  font-size: 0.7em;
+}
+.logo-container img {
+height: 40px;
+width: 40px;
+}
 }

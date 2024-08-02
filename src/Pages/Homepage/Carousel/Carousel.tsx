@@ -5,6 +5,7 @@ import "./Carousel.css";
 
 import Slide1 from "./Slides/Slide1/Slide1";
 import Slide2 from "./Slides/Slide2/Slide2";
+import Slide3 from "./Slides/Slide3/Slide3";
 
 
 const CarouselComponent: React.FC = () => {
@@ -16,10 +17,12 @@ const CarouselComponent: React.FC = () => {
       interval={5000}
       transitionTime={500}
       stopOnHover={false}
+      autoPlay={false}
     
     >
       <Slide1 />
       <Slide2 />
+      <Slide3 />
     </Carousel>
   );
 };

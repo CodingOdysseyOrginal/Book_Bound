@@ -1,0 +1,62 @@
+
+  .Slide3Container {
+    background-color: brown;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .Slide3Text {
+    color: white;
+    margin-right: 20px;
+    flex: 1;
+  }
+  
+  .Slide3Text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .Slide3Text button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .Slide3Text button:hover{
+    background-color: #e5533d;
+    transform: scale(1.05);
+  }
+  
+  .Slide3ImgContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex: 1;
+    overflow: visible; 
+    position: relative; 
+    transform: translateX(-20px); 
+    height: 20%;
+    width: 20%;
+  }
+  
+  .Slide3ImgContainer img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    overflow: visible;
+    transform: rotate(-10deg);
+  }
+  

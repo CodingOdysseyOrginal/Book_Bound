@@ -12,7 +12,6 @@ a {
 }
 
 .carousel {
-  background-color: var(--flashWhite);
   height: 50vh;
   display: flex;
   align-items: center;
