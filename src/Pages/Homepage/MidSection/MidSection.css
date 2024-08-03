@@ -3,13 +3,19 @@
     margin: 0 auto; 
     padding: 20px; 
 }
-
-.MidSectionContainer i {
-    color: gray;
-    text-align: left; 
-}
-.MidSectionContainer h1{
+.MidSectionInfo{
     padding-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.MidSectionInfo button{
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.MidSectionInfo i {
+    color: gray;
 }
 
 .bookList {

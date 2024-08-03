@@ -4,6 +4,7 @@ import Yellowface from "../../../imgs/Yellowface.webp";
 import Metro2033 from "../../../imgs/Metro2033.jpg";
 import ThePictureOfDorianGray from "../../../imgs/ThePictureOfDorianGray.jpg";
 import Neuromancer from "../../../imgs/Neuromancer.jpg";
+import { Link } from "react-router-dom";
 
 const Slide3 = () => {
   return (
@@ -11,7 +12,9 @@ const Slide3 = () => {
       <div className="Slide3Container">
         <div className="Slide3Text">
           <h1>Look at some of our best sellers</h1>
+          <Link to="/Book_Bound/bestsellers">
           <button>Explore now </button>
+          </Link>
         </div>
         <div className="Slide3ImgContainer">
           <img src={Yellowface} alt="Yellowface" />

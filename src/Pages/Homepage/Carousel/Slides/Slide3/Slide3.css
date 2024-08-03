@@ -1,62 +1,162 @@
+.Slide3Container {
+  background-color: brown;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50vh;
+  box-sizing: border-box;
+  position: relative;
+}
 
-  .Slide3Container {
-    background-color: brown;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+.Slide3Text {
+  color: white;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.Slide3Text h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Slide3Text button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.Slide3Text button:hover {
+  background-color: #e5533d;
+  transform: scale(1.05);
+}
+
+.Slide3ImgContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex: 1;
+  overflow: visible;
+  position: relative;
+  transform: translateX(-20px);
+  height: 20%;
+  width: 20%;
+}
+
+.Slide3ImgContainer img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  overflow: visible;
+  transform: rotate(-10deg);
+}
+
+@media (max-width: 576px) {
+  .Slide3Text h1{
     position: relative;
+    font-size: 1.2rem;
   }
-  
-  .Slide3Text {
-    color: white;
-    margin-right: 20px;
-    flex: 1;
+  .Slide3Text{
+    padding-bottom: 110px;
+    position: relative;
+    z-index: 4;
   }
-  
-  .Slide3Text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  .Slide3ImgContainer {
+    padding-bottom: 290px;
+  }
+  .Slide3ImgContainer img{
+    overflow: visible;
   }
   .Slide3Text button{
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #ff6347;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px;
+    margin: 10px;
   }
-  .Slide3Text button:hover{
-    background-color: #e5533d;
-    transform: scale(1.05);
+}
+
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .Slide3Container {
+    height: 60vh;
   }
-  
+
+  .Slide3Text {
+    margin-right: 10px;
+  }
+
+  .Slide3Text h1 {
+    font-size: 2rem;
+  }
+
   .Slide3ImgContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    flex: 1;
-    overflow: visible; 
-    position: relative; 
-    transform: translateX(-20px); 
-    height: 20%;
-    width: 20%;
+    transform: translateX(-10px);
+    height: 25%;
+    width: 25%;
   }
-  
+
   .Slide3ImgContainer img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    overflow: visible;
-    transform: rotate(-10deg);
+    width: 180px;
+    height: 180px;
   }
-  
+}
+
+
+@media (min-width: 992px) {
+  .Slide3Container {
+    height: 70vh;
+  }
+
+  .Slide3Text {
+    margin-right: 30px;
+  }
+
+  .Slide3Text h1 {
+    font-size: 2rem;
+  }
+
+  .Slide3ImgContainer {
+    transform: translateX(-30px);
+    height: 30%;
+    width: 30%;
+  }
+
+  .Slide3ImgContainer img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .Slide3Container {
+    height: 50vh;
+  }
+
+  .Slide3Text {
+    margin-right: 40px;
+  }
+
+  .Slide3Text h1 {
+    font-size: 2.5rem;
+  }
+
+  .Slide3ImgContainer {
+    transform: translateX(-40px);
+    height: 35%;
+    width: 35%;
+  }
+
+  .Slide3ImgContainer img {
+    width: 250px;
+    height: 250px;
+  }
+}

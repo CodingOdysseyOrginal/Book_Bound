@@ -33,7 +33,7 @@ const BookDesign: React.FC<BookItemProps> = ({ book }) => {
           </Link>
           {isAdded ? (
             <Link to="/Book_Bound/cart" className="button added">
-              View Cart
+             View Cart
             </Link>
           ) : (
             <button

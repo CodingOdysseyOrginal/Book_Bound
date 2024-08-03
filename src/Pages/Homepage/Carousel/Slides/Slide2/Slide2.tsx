@@ -6,7 +6,7 @@ import "./Slide2.css";
 const Slide2 = () => {
   return (
     <div className="HomePageSlide2">
-      <Link to="#" className="Slide2Image">
+      <Link to={`/product/2`} className="Slide2Image">
         <img src={Dune} alt="Dune" />
       </Link>
       <div className="Slide2Info">
@@ -15,7 +15,7 @@ const Slide2 = () => {
           <button>Explore Now</button>
         </Link>
       </div>
-      <Link to="#" className="Slide2Image">
+      <Link to={`/product/3`} className="Slide2Image">
         <img
           src={WillSaveTheGalaxyForCash}
           alt="Will Save the Galaxy for Cash"

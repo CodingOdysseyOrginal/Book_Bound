@@ -5,7 +5,7 @@ import "./Slide1.css";
 const Slide1 = () => {
   return (
     <div className="HomePageSlide1">
-      <Link to="#">
+      <Link to={`/product/1`}>
         <figure>
           <img src={CrackCode} alt="Crack the Interview" />
         </figure>
@@ -13,7 +13,7 @@ const Slide1 = () => {
       <div className="Slide1Info">
         <h1>Cracking the Coding Interview</h1>
         <p>How to crack the coding quiz!</p>
-        <Link to="#">
+        <Link to={`/product/1`}>
           <button>Shop Now</button>
         </Link>
       </div>
