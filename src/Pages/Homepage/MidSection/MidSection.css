@@ -3,19 +3,32 @@
     margin: 0 auto; 
     padding: 20px; 
 }
-.MidSectionInfo{
+.MidSectionInfo {
     padding-bottom: 20px;
     align-items: center;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
 }
 
 .MidSectionInfo button{
-    padding: 15px;
-    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.MidSectionInfo button:hover{
+    background-color: #e5533d;
+    transform: scale(1.05);
 }
 
-.MidSectionInfo i {
+.MidSectionInfo h1 {
     color: gray;
+    
 }
 
 .bookList {
@@ -25,4 +38,5 @@
     padding: 0;
     list-style: none;
 }
+
 

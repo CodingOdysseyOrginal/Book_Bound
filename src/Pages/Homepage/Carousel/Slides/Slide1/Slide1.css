@@ -22,10 +22,6 @@ img {
   border-radius: 10%;
 }
 
-img:hover {
-  transform: scale(1.05);
-}
-
 .Slide1Info {
   max-width: 45%;
   margin-left: 20px;

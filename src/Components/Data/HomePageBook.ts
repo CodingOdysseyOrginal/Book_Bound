@@ -3,11 +3,11 @@ import Dune from '../../Pages/Homepage/imgs/Dune.webp';
 import HarryPotterStone from '../../Pages/Homepage/imgs/HarryPotterStone.jpg';
 import SaveTheGalaxy from '../../Pages/Homepage/imgs/WillDestoryTheGalaxyForCash.jpg';
 import KingsOfTheWyld from '../../Pages/Homepage/imgs/KingsOfTheWyld.jpg';
-import ACourtOfThronesAndRoses from '../../Pages/Homepage/imgs/ACourtOfThornsAndRoses.jpg'
-import ManKind from '../../Pages/Homepage/imgs/ManKind.jpg'
-import Metro from '../../Pages/Homepage//imgs/Metro2033.jpg';
-import Neuromancer from '../../Pages/Homepage/imgs/Neuromancer.jpg'
-import YellowFace from '../../Pages//Homepage/imgs/Yellowface.webp'
+import ACourtOfThronesAndRoses from '../../Pages/Homepage/imgs/ACourtOfThornsAndRoses.jpg';
+import ManKind from '../../Pages/Homepage/imgs/ManKind.jpg';
+import Metro from '../../Pages/Homepage/imgs/Metro2033.jpg';
+import Neuromancer from '../../Pages/Homepage/imgs/Neuromancer.jpg';
+import YellowFace from '../../Pages/Homepage/imgs/Yellowface.webp';
 
 export interface Book {
   id: string;
@@ -15,8 +15,10 @@ export interface Book {
   description: string;
   img: string;
   price: number;
-  author: string; 
+  author: string;
   format: string;
+  published: string; 
+  pageNumber: number; 
 }
 
 const books: Book[] = [
@@ -29,7 +31,9 @@ const books: Book[] = [
     img: CrackCode,
     price: 12.50,
     format: 'Paperback',
-    author: 'Gayle Laakmann McDowell', 
+    author: 'Gayle Laakmann McDowell',
+    published: '2015-07-01',
+    pageNumber: 687,
   },
   {
     id: '2',
@@ -41,7 +45,9 @@ const books: Book[] = [
     img: Dune,
     price: 10.00,
     format: 'Paperback',
-    author: 'Frank Herbert', 
+    author: 'Frank Herbert',
+    published: '1965-08-01',
+    pageNumber: 896,
   },
   {
     id: '3',
@@ -53,6 +59,8 @@ const books: Book[] = [
     price: 7.89,
     format: 'Paperback',
     author: 'Yahtzee Croshaw',
+    published: '2017-11-15',
+    pageNumber: 370,
   },
   {
     id: '4',
@@ -63,7 +71,9 @@ const books: Book[] = [
     img: HarryPotterStone,
     price: 12.99,
     format: 'Paperback',
-    author: 'J.K. Rowling', 
+    author: 'J.K. Rowling',
+    published: '1997-06-26',
+    pageNumber: 223,
   },
   {
     id: '5',
@@ -74,7 +84,9 @@ const books: Book[] = [
     img: KingsOfTheWyld,
     price: 12.99,
     format: 'Paperback',
-    author: 'Nicholas Eames', 
+    author: 'Nicholas Eames',
+    published: '2017-02-21',
+    pageNumber: 544,
   },
   {
     id: '6',
@@ -85,18 +97,22 @@ const books: Book[] = [
     img: ACourtOfThronesAndRoses,
     price: 8.99,
     format: 'Paperback',
-    author: 'Sarah J. Maas', 
+    author: 'Sarah J. Maas',
+    published: '2015-05-05',
+    pageNumber: 432,
   },
   {
     id: '7',
-    title: 'Have a Nice Day: A Tale of Blood and Sweatsocks',
+    title: 'A Tale of Blood and Sweatsocks',
     description: 'In his candid autobiography, Mick Foley, a legendary professional wrestler, recounts his journey from childhood fan to wrestling superstar. \
     Known for his unorthodox style and brutal matches, Foley shares personal anecdotes, behind-the-scenes stories, and insights into the wrestling industry. \
     With humor and authenticity, he reveals the challenges and triumphs of his career in the squared circle.',
     img: ManKind,
     price: 12.99,
     format: 'Hardback',
-    author: 'Mick Foley', 
+    author: 'Mick Foley',
+    published: '1999-10-31',
+    pageNumber: 768,
   },
   {
     id: '8',
@@ -107,7 +123,9 @@ const books: Book[] = [
     img: Metro,
     price: 15.99,
     format: 'Hardback',
-    author: 'Dmitry Glukhovsky', 
+    author: 'Dmitry Glukhovsky',
+    published: '2005-01-01',
+    pageNumber: 458,
   },
   {
     id: '9',
@@ -118,7 +136,9 @@ const books: Book[] = [
     img: Neuromancer,
     price: 12.99,
     format: 'Hardback',
-    author: 'William Gibson', 
+    author: 'William Gibson',
+    published: '1984-07-01',
+    pageNumber: 271,
   },
   {
     id: '10',
@@ -129,7 +149,9 @@ const books: Book[] = [
     img: YellowFace,
     price: 12.99,
     format: 'Hardback',
-    author: 'R.F. Kuang', 
+    author: 'R.F. Kuang',
+    published: '2023-05-25',
+    pageNumber: 336,
   },
 ];
 

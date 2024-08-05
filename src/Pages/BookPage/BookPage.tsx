@@ -1,37 +1,70 @@
-// src/pages/BookPage.tsx
-
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import books, { Book } from '../../Components/Data/HomePageBook'; // Import your Book type and data
-import './BookPage.css'; // Import the CSS file for styling
+import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import books, { Book } from "../../Components/Data/HomePageBook";
+import { useCart } from "../../Components/CartContext/CartContext";
+import "./BookPage.css";
 
 const BookPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const { dispatch } = useCart();
+  const [isAdded, setIsAdded] = useState(false);
 
-  // Find the book with the given id
   const book: Book | undefined = books.find((book) => book.id === id);
 
   if (!book) {
     return <div>Book not found!</div>;
   }
 
+  const handleAddToCart = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: book });
+    setIsAdded(true);
+  };
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="bookPage">
-      <div className="bookPageContent">
-        <img src={book.img} alt={book.title} className="bookPageImage" />
-        <div className="bookPageInfo">
-          <h1 className="bookPageTitle">{book.title}</h1>
-          <p className="bookPageAuthor"><strong>Author:</strong> {book.author}</p>
-          <p className="bookPageDescription"><strong>Description:</strong> {book.description}</p>
-          <p className="bookPagePrice"><strong>Price:</strong> ${book.price.toFixed(2)}</p>
-          <div className="bookPageBasicInfo">
-            <h2>Basic Information</h2>
-            <p><strong>Title:</strong> {book.title}</p>
-            <p><strong>Author:</strong> {book.author}</p>
-            <p><strong>Description:</strong> {book.description}</p>
-            <p><strong>Price:</strong> ${book.price.toFixed(2)}</p>
-          </div>
+      <div className="bookPageImg">
+        <img src={book.img} alt={book.title} />
+      </div>
+      <div className="bookPageInfo">
+        <h1>{book.title}</h1>
+        <h2>By {book.author}</h2>
+        <div className="BookPageInfo2">
+
+        <h3>Page Number: {book.pageNumber}</h3>
+        <h3>{book.format}</h3>
+        <h3>Published: {book.published}</h3>
+        <h3>£ {book.price}</h3>
         </div>
+        <p className="bookDescription">{book.description}</p>
+       
+      </div>
+      <div className="buttonGroup">
+        {isAdded ? (
+          <button 
+            onClick={() => navigate("/Book_Bound/cart")} 
+            className="button added"
+          >
+            View Cart
+          </button>
+        ) : (
+          <button 
+            onClick={handleAddToCart} 
+            className="button"
+          >
+            Add To Cart
+          </button>
+        )}
+        <button 
+          onClick={handleGoBack} 
+          className="button"
+        >
+          Go Back
+        </button>
       </div>
     </div>
   );
