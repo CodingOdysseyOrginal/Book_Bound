@@ -20,7 +20,7 @@
   max-width: 800px;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .bookPageImg {
@@ -29,8 +29,9 @@
 
 .bookPageImg img {
   border-radius: 8px;
-  width: 300px;
+  width: 100%;
   height: auto;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -62,14 +63,17 @@
   margin-bottom: 20px;
 }
 
-.BookPageInfo2{
+.BookPageInfo2 {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .buttonGroup {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button {
@@ -94,4 +98,71 @@
 
 .button.added {
   background-color: var(--chilli-red);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Devices (Phones, 600px and below) */
+@media (max-width: 600px) {
+  .bookPage {
+    padding: 15px;
+  }
+  .bookPageInfo h1 {
+    font-size: 1.5rem;
+  }
+  .bookPageInfo h2 {
+    font-size: 1.2rem;
+  }
+  .bookDescription,
+  .bookPageInfo h3 {
+    font-size: 0.9rem;
+  }
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Medium Devices (Tablets, 768px and below) */
+@media (max-width: 768px) {
+  .bookPageInfo {
+    padding: 15px;
+  }
+  .BookPageInfo2 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Large Devices (Laptops, 1024px and below) */
+@media (max-width: 1024px) {
+  .bookPage {
+    padding: 20px;
+  }
+  .bookPageInfo h1 {
+    font-size: 1.8rem;
+  }
+  .bookPageInfo h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* For Screens Larger Than Tablet (768px and above) */
+@media (min-width: 769px) {
+  .bookPageImg img {
+    max-width: 250px;
+  }
+}
+
+/* Extra Large Devices (Desktops, 1440px and above) */
+@media (min-width: 1440px) {
+  .bookPage {
+    max-width: 1000px;
+  }
+  .bookPageInfo h1 {
+    font-size: 2.2rem;
+  }
+  .bookPageInfo h2 {
+    font-size: 1.8rem;
+  }
 }

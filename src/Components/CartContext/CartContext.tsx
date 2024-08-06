@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useReducer, ReactNode } from 'react';
 import { Book } from '../Data/HomePageBook';
 
+
 interface CartItem extends Book {
   quantity: number;
 }
@@ -9,10 +10,10 @@ interface CartState {
   items: CartItem[];
 }
 
-interface CartAction {
-  type: 'ADD_TO_CART';
-  payload: Book;
-}
+type CartAction =
+  | { type: 'ADD_TO_CART'; payload: Book }
+  | { type: 'REMOVE_ITEM'; payload: string }
+  | { type: 'UPDATE_QUANTITY'; payload: { id: string; quantity: number } };
 
 const initialState: CartState = {
   items: [],
@@ -33,11 +34,12 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       const existingItem = state.items.find((item) => item.id === book.id);
 
       if (existingItem) {
-      
         return {
           ...state,
           items: state.items.map((item) =>
-            item.id === book.id ? { ...item, quantity: item.quantity + 1 } : item
+            item.id === book.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
           ),
         };
       }
@@ -47,6 +49,24 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
         items: [...state.items, { ...book, quantity: 1 }],
       };
     }
+
+    case 'REMOVE_ITEM': {
+      return {
+        ...state,
+        items: state.items.filter((item) => item.id !== action.payload),
+      };
+    }
+
+    case 'UPDATE_QUANTITY': {
+      const { id, quantity } = action.payload;
+      return {
+        ...state,
+        items: state.items.map((item) =>
+          item.id === id ? { ...item, quantity } : item
+        ),
+      };
+    }
+
     default:
       return state;
   }

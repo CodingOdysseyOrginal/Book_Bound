@@ -8,11 +8,13 @@
   --flash-white: #f0f0f0;
   --yellow: #ffeb3b;
   --lime-green: #cddc39;
+  --light-blue: #51789C;
+  --Dark-Blue: #34495E;
 }
 
 .footer {
-  background: var(--orange);
-  color: var(--black);
+  background: var(--light-blue);
+  color: white;
   padding: 40px 20px;
   text-align: center;
   overflow: hidden;
@@ -38,7 +40,7 @@
 .footer::before {
   width: 200px;
   height: 200px;
-  background: var(--vermilion);
+  background: var(--Dark-Blue);
   top: -100px;
   left: -100px;
 }
@@ -46,7 +48,7 @@
 .footer::after {
   width: 300px;
   height: 300px;
-  background: var(--chilli-red);
+  background: var(--Dark-Blue);
   bottom: -150px;
   right: -150px;
 }
@@ -54,15 +56,15 @@
 .footer .color-spot-1 {
   width: 150px;
   height: 150px;
-  background: var(--vermilion);
+  background: var(--Dark-Blue);
   top: 50px;
-  right: 50px;
+  right: 300px;
 }
 
 .footer .color-spot-2 {
   width: 150px;
   height: 150px;
-  background: var(--vermilion);
+  background: var(--Dark-Blue);
   bottom: 50px;
   left: 100px;
 }
@@ -70,7 +72,7 @@
 .footer .color-spot-3 {
   width: 220px;
   height: 220px;
-  background: var(--chilli-red);
+  background: var(--Dark-Blue);
   top: 150px;
   left: 400px;
 }
@@ -119,7 +121,7 @@
 
 .quick-links ul li a,
 .social-media ul li a {
-  color: var(--black);
+  color: white;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
   position: relative;
@@ -128,7 +130,7 @@
 
 .quick-links ul li a:hover,
 .social-media ul li a:hover {
-  color: var(--black);
+  color: white;
   transform: scale(1.1);
 }
 
@@ -138,7 +140,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: var(--black);
+  background: white;
   transition: width 0.3s;
   position: absolute;
   left: 0;
@@ -151,7 +153,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--flash-white);
   padding-top: 10px;
   margin-top: 20px;
 }

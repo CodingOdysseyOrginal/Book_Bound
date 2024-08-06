@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProgressBar from "../ProgessBar/ProgressBar";
-import Logo from "./img/Logo.svg";
-import cart from "./img/Cart.svg";
+import Logo from "./img/LogoWhite.svg";
+import cart from "./img/WhiteCart.png";
 import "./Navbar.css";
 import { useCart } from "../CartContext/CartContext"; 
 
