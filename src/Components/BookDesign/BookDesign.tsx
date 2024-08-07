@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../CartContext/CartContext';
 
 interface BookItemProps {
-  book: Book;
+  book: Book
 }
 
 const BookDesign: React.FC<BookItemProps> = ({ book }) => {

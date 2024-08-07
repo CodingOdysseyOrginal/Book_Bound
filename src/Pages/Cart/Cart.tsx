@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../../Components/CartContext/CartContext';
 import './Cart.css';
+import { Link } from 'react-router-dom';
 
 const Cart: React.FC = () => {
   const { state, dispatch } = useCart();
@@ -31,11 +32,13 @@ const Cart: React.FC = () => {
           <ul className="cartList">
             {state.items.map((item) => (
               <li key={item.id} className="cart-item">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="cart-item-image"
-                />
+                <Link to={`/product/${item.id}`}>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="cart-item-image"
+                  />
+                </Link>
                 <div className="cart-item-details">
                   <h2>{item.title}</h2>
                   <p>Author: {item.author}</p>

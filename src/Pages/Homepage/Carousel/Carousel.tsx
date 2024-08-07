@@ -17,7 +17,7 @@ const CarouselComponent: React.FC = () => {
       interval={5000}
       transitionTime={500}
       stopOnHover={false}
-      autoPlay={false}
+      autoPlay={true}
     
     >
       <Slide1 />
