@@ -19,3 +19,12 @@
 body {
   background-color: var(--flashWhite);
 }
+
+/* Layout for books so i dont have to repeat code for each one  */
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  padding: 0;
+  list-style: none;
+}

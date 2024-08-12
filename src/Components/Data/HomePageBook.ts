@@ -19,6 +19,7 @@ export interface Book {
   format: string;
   published: string; 
   pageNumber: number; 
+  category: string;
 }
 
 const books: Book[] = [
@@ -34,6 +35,7 @@ const books: Book[] = [
     author: 'Gayle Laakmann McDowell',
     published: '2015-07-01',
     pageNumber: 687,
+    category: 'Homepage',
   },
   {
     id: '2',
@@ -48,6 +50,7 @@ const books: Book[] = [
     author: 'Frank Herbert',
     published: '1965-08-01',
     pageNumber: 896,
+    category: 'Homepage',
   },
   {
     id: '3',
@@ -61,6 +64,7 @@ const books: Book[] = [
     author: 'Yahtzee Croshaw',
     published: '2017-11-15',
     pageNumber: 370,
+    category: 'Homepage',
   },
   {
     id: '4',
@@ -74,6 +78,7 @@ const books: Book[] = [
     author: 'J.K. Rowling',
     published: '1997-06-26',
     pageNumber: 223,
+    category: 'Homepage',
   },
   {
     id: '5',
@@ -87,6 +92,7 @@ const books: Book[] = [
     author: 'Nicholas Eames',
     published: '2017-02-21',
     pageNumber: 544,
+    category: 'Homepage',
   },
   {
     id: '6',
@@ -100,6 +106,7 @@ const books: Book[] = [
     author: 'Sarah J. Maas',
     published: '2015-05-05',
     pageNumber: 432,
+    category: 'Homepage',
   },
   {
     id: '7',
@@ -113,6 +120,7 @@ const books: Book[] = [
     author: 'Mick Foley',
     published: '1999-10-31',
     pageNumber: 768,
+    category: 'Homepage',
   },
   {
     id: '8',
@@ -126,6 +134,7 @@ const books: Book[] = [
     author: 'Dmitry Glukhovsky',
     published: '2005-01-01',
     pageNumber: 458,
+    category: 'Homepage',
   },
   {
     id: '9',
@@ -139,6 +148,7 @@ const books: Book[] = [
     author: 'William Gibson',
     published: '1984-07-01',
     pageNumber: 271,
+    category: 'Homepage',
   },
   {
     id: '10',
@@ -152,7 +162,10 @@ const books: Book[] = [
     author: 'R.F. Kuang',
     published: '2023-05-25',
     pageNumber: 336,
+    category: 'Homepage',
   },
 ];
+
+export const HomepageBooks = books.filter(product => product.category === "Homepage");
 
 export default books;

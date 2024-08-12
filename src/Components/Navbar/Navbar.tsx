@@ -83,10 +83,13 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
         </ul>
-
+        
         <div className="color-spot-1"></div>
         <div className="color-spot-2"></div>
         <div className="color-spot-3"></div>
+        <div>
+          {/* search bar here */}
+        </div>
       </nav>
       <Sidebar isOpen={menuActive} toggleSidebar={toggleMenu} />
     </>

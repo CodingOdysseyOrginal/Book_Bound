@@ -1,6 +1,6 @@
 import React from 'react';
 import BookItem from '../../../Components/BookDesign/BookDesign';
-import books from '../../../Components/Data/HomePageBook';
+import { HomepageBooks } from '../../../Components/Data/HomePageBook';
 import './MidSection.css'; 
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const MidSection: React.FC = () => {
       </Link>
       </div>
       <div className="bookList"> 
-        {books.map((book) => (
+        {HomepageBooks.map((book) => (
           <BookItem key={book.id} book={book} />
         ))}
       </div>

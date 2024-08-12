@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import books, { Book } from "../../Components/Data/HomePageBook";
+import AdventureBooks from "../../Components/Data/AdventureBooks"; 
+
 import { useCart } from "../../Components/CartContext/CartContext";
 import "./BookPage.css";
 
@@ -10,7 +12,10 @@ const BookPage: React.FC = () => {
   const { dispatch } = useCart();
   const [isAdded, setIsAdded] = useState(false);
 
-  const book: Book | undefined = books.find((book) => book.id === id);
+
+  const allBooks: Book[] = [...books, ...AdventureBooks];
+
+  const book: Book | undefined = allBooks.find((book) => book.id === id);
 
   if (!book) {
     return <div>Book not found!</div>;
@@ -34,14 +39,12 @@ const BookPage: React.FC = () => {
         <h1>{book.title}</h1>
         <h2>By {book.author}</h2>
         <div className="BookPageInfo2">
-
-        <h3>Page Number: {book.pageNumber}</h3>
-        <h3>{book.format}</h3>
-        <h3>Published: {book.published}</h3>
-        <h3>£ {book.price}</h3>
+          <h3>Number of Pages: {book.pageNumber}</h3>
+          <h3>{book.format}</h3>
+          <h3>Published: {book.published}</h3>
+          <h3>£ {book.price}</h3>
         </div>
         <p className="bookDescription">{book.description}</p>
-       
       </div>
       <div className="buttonGroup">
         {isAdded ? (

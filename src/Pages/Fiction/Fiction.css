@@ -1,3 +1,8 @@
 .FictionContainer{
-    height: 50vh;
+    height: auto;
+    padding-bottom:10px;
+}
+.fictionTitle{
+  margin: 20px;
+  text-align: center;  
 }
