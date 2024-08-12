@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import books, { Book } from "../../Components/Data/HomePageBook";
 import AdventureBooks from "../../Components/Data/AdventureBooks"; 
-
+import RomanceBooks from "../../Components/Data/RomanceBooks"
+import HorrorBooks from '../../Components/Data/HorrorBook';
 import { useCart } from "../../Components/CartContext/CartContext";
 import "./BookPage.css";
 
@@ -13,7 +14,7 @@ const BookPage: React.FC = () => {
   const [isAdded, setIsAdded] = useState(false);
 
 
-  const allBooks: Book[] = [...books, ...AdventureBooks];
+  const allBooks: Book[] = [...books, ...AdventureBooks, ...RomanceBooks, ...HorrorBooks];
 
   const book: Book | undefined = allBooks.find((book) => book.id === id);
 
