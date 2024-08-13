@@ -108,7 +108,7 @@ const books: Book[] = [
     },
     {
         id: '18',
-        title: 'The Fellowship of the Ring',
+        title:"The Lord of the Rings: The Fellowship of the Ring",
         description: 'J.R.R. Tolkien\'s "The Fellowship of the Ring" is the first volume of the legendary "The Lord of the Rings" trilogy. The story follows Frodo Baggins, a hobbit from the Shire, who is entrusted with the One Ring, a powerful artifact capable of unimaginable destruction. Along with a diverse fellowship of allies, Frodo embarks on a perilous journey to destroy the ring in the fires of Mount Doom. Tolkien’s epic adventure explores themes of friendship, courage, and the struggle between good and evil, laying the foundation for one of the greatest fantasy sagas of all time.',
         img: LordOfTheRingPart1,
         price: 15.99,
