@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import books, { Book } from "../../Components/Data/HomePageBook";
-import AdventureBooks from "../../Components/Data/AdventureBooks"; 
-import RomanceBooks from "../../Components/Data/RomanceBooks"
-import HorrorBooks from '../../Components/Data/HorrorBook';
+import AdventureBooks from "../../Components/Data/AdventureBooks";
+import RomanceBooks from "../../Components/Data/RomanceBooks";
+import HorrorBooks from "../../Components/Data/HorrorBook";
 import { useCart } from "../../Components/CartContext/CartContext";
 import "./BookPage.css";
 
@@ -13,8 +13,12 @@ const BookPage: React.FC = () => {
   const { dispatch } = useCart();
   const [isAdded, setIsAdded] = useState(false);
 
-
-  const allBooks: Book[] = [...books, ...AdventureBooks, ...RomanceBooks, ...HorrorBooks];
+  const allBooks: Book[] = [
+    ...books,
+    ...AdventureBooks,
+    ...RomanceBooks,
+    ...HorrorBooks,
+  ];
 
   const book: Book | undefined = allBooks.find((book) => book.id === id);
 
@@ -23,7 +27,7 @@ const BookPage: React.FC = () => {
   }
 
   const handleAddToCart = () => {
-    dispatch({ type: 'ADD_TO_CART', payload: book });
+    dispatch({ type: "ADD_TO_CART", payload: book });
     setIsAdded(true);
   };
 
@@ -49,24 +53,18 @@ const BookPage: React.FC = () => {
       </div>
       <div className="buttonGroup">
         {isAdded ? (
-          <button 
-            onClick={() => navigate("/Book_Bound/cart")} 
+          <button
+            onClick={() => navigate("/Book_Bound/cart")}
             className="button added"
           >
             View Cart
           </button>
         ) : (
-          <button 
-            onClick={handleAddToCart} 
-            className="button"
-          >
+          <button onClick={handleAddToCart} className="button">
             Add To Cart
           </button>
         )}
-        <button 
-          onClick={handleGoBack} 
-          className="button"
-        >
+        <button onClick={handleGoBack} className="button">
           Go Back
         </button>
       </div>

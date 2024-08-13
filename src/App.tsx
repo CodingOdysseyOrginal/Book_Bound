@@ -1,21 +1,23 @@
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import BestSellers from './Pages/BestSellers/BestSellers';
-import Cart from './Pages/Cart/Cart';
-import Fiction from './Pages/Fiction/Fiction';
-import GiftCards from './Pages/GiftCards/GiftCards';
-import Homepage from './Pages/Homepage/Homepage';
-import NonFiction from './Pages/NonFiction/NonFiction';
-import Footer from './Components/Footer/Footer';
-import BookPage from './Pages/BookPage/BookPage';
-import { CartProvider } from './Components/CartContext/CartContext'; 
-import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import BestSellers from "./Pages/BestSellers/BestSellers";
+import Cart from "./Pages/Cart/Cart";
+import Fiction from "./Pages/Fiction/Fiction";
+import GiftCards from "./Pages/GiftCards/GiftCards";
+import Homepage from "./Pages/Homepage/Homepage";
+import NonFiction from "./Pages/NonFiction/NonFiction";
+import Footer from "./Components/Footer/Footer";
+import BookPage from "./Pages/BookPage/BookPage";
+import { CartProvider } from "./Components/CartContext/CartContext";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import AnimatedBackground from "./Components/AnimatedBackground/AnimatedBackground";
 
 function App() {
   return (
     <CartProvider>
       <ScrollToTop />
       <Navbar />
+      <AnimatedBackground />
       <Routes>
         <Route path="/Book_Bound/" element={<Homepage />} />
         <Route path="/Book_Bound/fiction" element={<Fiction />} />

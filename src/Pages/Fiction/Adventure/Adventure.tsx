@@ -1,6 +1,6 @@
 import BookItem from "../../../Components/BookDesign/BookDesign";
-import {AdventureBooks} from "../../../Components/Data/AdventureBooks";
-import './Adventure.css'
+import { AdventureBooks } from "../../../Components/Data/AdventureBooks";
+import "./Adventure.css";
 
 const Adventure = () => {
   return (
