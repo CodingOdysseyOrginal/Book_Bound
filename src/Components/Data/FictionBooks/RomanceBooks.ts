@@ -1,9 +1,9 @@
-import AcourtOfMistAndFury from "../../Pages/Fiction/Romance/img/ACourtOfMistAndFury.jpg";
-import FourthWing from "../../Pages//Fiction//Romance/img/FourthWing.jpg";
-import OnceUponABrokenHeart from "../../Pages/Fiction/Romance/img/OnceUponABrokenHeart.jpg";
-import OneDay from "../../Pages/Fiction/Romance/img/OneDay.webp";
-import RomeoAndJuliet from "../../Pages/Fiction/Romance/img/RomeoAndJuliet.jpg";
-import TheGreatGatsby from "../../Pages/Fiction/Romance/img/TheGreatGatsby.jpg";
+import AcourtOfMistAndFury from "../../../Pages/Fiction/Romance/img/ACourtOfMistAndFury.jpg";
+import FourthWing from "../../../Pages//Fiction//Romance/img/FourthWing.jpg";
+import OnceUponABrokenHeart from "../../../Pages/Fiction/Romance/img/OnceUponABrokenHeart.jpg";
+import OneDay from "../../../Pages/Fiction/Romance/img/OneDay.webp";
+import RomeoAndJuliet from "../../../Pages/Fiction/Romance/img/RomeoAndJuliet.jpg";
+import TheGreatGatsby from "../../../Pages/Fiction/Romance/img/TheGreatGatsby.jpg";
 
 export interface Book {
   id: string;

@@ -1,18 +1,20 @@
 import BookItem from "../../../Components/BookDesign/BookDesign";
-import RomanceBooks from "../../../Components/Data/FictionBooks/RomanceBooks";
-const Romance = () => {
+import BiographieBooks from "../../../Components/Data/NonFictionBooks/BiographieBooks";
+type Props = {};
+
+function Biographies({}: Props) {
   return (
     <div>
       <div className="GenreTitles">
-        <h1>Romance...</h1>
+        <h1>Biographies..</h1>
       </div>
       <div className="bookList">
-        {RomanceBooks.map((book) => (
+        {BiographieBooks.map((book) => (
           <BookItem key={book.id} book={book} />
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default Romance;
+export default Biographies;

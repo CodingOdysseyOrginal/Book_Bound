@@ -19,6 +19,24 @@
 body {
   background-color: var(--flashWhite);
 }
+/* General layout for each book section  */
+.Container {
+  height: auto;
+  padding-bottom: 10px;
+  max-width: 1200px;
+}
+
+.Title {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Titles */
+.GenreTitles h1{
+  margin: 25px;
+  color: gray;
+  font-size: 1.7em ;
+  }
 
 /* Layout for books so i dont have to repeat code for each one  */
 .bookList {

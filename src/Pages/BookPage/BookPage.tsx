@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import books, { Book } from "../../Components/Data/HomePageBook";
-import AdventureBooks from "../../Components/Data/AdventureBooks";
-import RomanceBooks from "../../Components/Data/RomanceBooks";
-import HorrorBooks from "../../Components/Data/HorrorBook";
+import AdventureBooks from "../../Components/Data/FictionBooks/AdventureBooks";
+import RomanceBooks from "../../Components/Data/FictionBooks/RomanceBooks";
+import HorrorBooks from "../../Components/Data/FictionBooks/HorrorBook";
 import { useCart } from "../../Components/CartContext/CartContext";
 import "./BookPage.css";
+import ScienceFictionBooks from "../../Components/Data/FictionBooks/ScienceFictionBooks";
+import BiographieBooks from "../../Components/Data/NonFictionBooks/BiographieBooks";
+import SelfHelpBooks from '../../Components/Data/NonFictionBooks/SelfHelpBooks'
+import ClassicBooks from "../../Components/Data/BestSellerBooks/ClassicBooks";
 
 const BookPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,6 +22,10 @@ const BookPage: React.FC = () => {
     ...AdventureBooks,
     ...RomanceBooks,
     ...HorrorBooks,
+    ...ScienceFictionBooks,
+    ...BiographieBooks,
+    ...SelfHelpBooks,
+    ...ClassicBooks
   ];
 
   const book: Book | undefined = allBooks.find((book) => book.id === id);

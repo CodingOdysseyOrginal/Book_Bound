@@ -1,12 +1,12 @@
-import AssassinsApprentice from '../../Pages/Fiction/Adventure/Img/AssassinsApprentince.jpg';
-import Mogworld from '../../Pages/Fiction/Adventure/Img/MogWorld.jpg';
-import ThePoppyWar from '../../Pages/Fiction/Adventure/Img/PoppyWar.webp';
-import TheWayOfKings from '../../Pages/Fiction/Adventure/Img/TheWayOfKings.jpg';
-import AGameOfThrones from '../../Pages/Fiction/Adventure/Img/AGameOfThrones.jpg';
-import Babel from '../../Pages/Fiction/Adventure/Img/Babel.jpg';
-import EmpireOfAVampire from '../../Pages/Fiction/Adventure/Img/EmpireOfTheVampire.jpg';
-import LordOfTheRingPart1 from '../../Pages/Fiction/Adventure/Img/TheLordOfTheRingsPart1.jpg';
-import TheWitcherTheLastWish from '../../Pages/Fiction/Adventure/Img/TheWitcherTheLastWish.webp';
+import AssassinsApprentice from '../../../Pages/Fiction/Adventure/Img/AssassinsApprentince.jpg';
+import Mogworld from '../../../Pages/Fiction/Adventure/Img/MogWorld.jpg';
+import ThePoppyWar from '../../../Pages/Fiction/Adventure/Img/PoppyWar.webp';
+import TheWayOfKings from '../../../Pages/Fiction/Adventure/Img/TheWayOfKings.jpg';
+import AGameOfThrones from '../../../Pages/Fiction/Adventure/Img/AGameOfThrones.jpg';
+import Babel from '../../../Pages/Fiction/Adventure/Img/Babel.jpg';
+import EmpireOfAVampire from '../../../Pages/Fiction/Adventure/Img/EmpireOfTheVampire.jpg';
+import LordOfTheRingPart1 from '../../../Pages/Fiction/Adventure/Img/TheLordOfTheRingsPart1.jpg';
+import TheWitcherTheLastWish from '../../../Pages/Fiction/Adventure/Img/TheWitcherTheLastWish.webp';
 
 export interface Book {
     id: string;

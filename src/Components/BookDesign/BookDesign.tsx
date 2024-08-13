@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Book } from '../Data/HomePageBook';
-import './BookDesign.css';
-import { Link } from 'react-router-dom';
-import { useCart } from '../CartContext/CartContext';
+import React, { useState } from "react";
+import { Book } from "../Data/HomePageBook";
+import "./BookDesign.css";
+import { Link } from "react-router-dom";
+import { useCart } from "../CartContext/CartContext";
 
 interface BookItemProps {
-  book: Book
+  book: Book;
 }
 
 const BookDesign: React.FC<BookItemProps> = ({ book }) => {
@@ -13,7 +13,7 @@ const BookDesign: React.FC<BookItemProps> = ({ book }) => {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToCart = () => {
-    dispatch({ type: 'ADD_TO_CART', payload: book });
+    dispatch({ type: "ADD_TO_CART", payload: book });
     setIsAdded(true);
   };
 
@@ -33,13 +33,10 @@ const BookDesign: React.FC<BookItemProps> = ({ book }) => {
           </Link>
           {isAdded ? (
             <Link to="/Book_Bound/cart" className="button added">
-             View Cart
+              View Cart
             </Link>
           ) : (
-            <button
-              onClick={handleAddToCart}
-              className="button"
-            >
+            <button onClick={handleAddToCart} className="button">
               Add To Cart
             </button>
           )}

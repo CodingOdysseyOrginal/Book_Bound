@@ -1,13 +1,13 @@
-import GeorgeOrwell1984 from '../../Pages/Fiction/Horror/Img/GeorgeOrwell1984.jpg';
-import AtTheMountainsOfMadness from '../../Pages/Fiction/Horror/Img/AtTheMountainsOfMadness.jpg';
-import Dracula from '../../Pages/Fiction/Horror/Img/Dracula.webp';
-import Frankenstein from '../../Pages/Fiction/Horror/Img/Frankenstein.jpg';
-import GreatestHitsHarlahEllisan from '../../Pages/Fiction/Horror/Img/GreatestHitsHarlahEllisan.jpg';
-import IT from '../../Pages/Fiction/Horror/Img/IT.jpg';
-import TheEyesAreTheBestPart from '../../Pages/Fiction/Horror/Img/TheEyesAreTheBestPart.webp';
-import ThePictureOfDorianGray from '../../Pages/Fiction/Horror/Img/ThePictureOfDorianGray.jpg';
-import TheShining from '../../Pages/Fiction/Horror/Img/AtTheMountainsOfMadness.jpg';
-import InterviewWithTheVampire from '../../Pages/Fiction/Horror/Img/InterviewWithTheVampire.jpg';
+import GeorgeOrwell1984 from '../../../Pages/Fiction/Horror/Img/GeorgeOrwell1984.jpg';
+import AtTheMountainsOfMadness from '../../../Pages/Fiction/Horror/Img/AtTheMountainsOfMadness.jpg';
+import Dracula from '../../../Pages/Fiction/Horror/Img/Dracula.webp';
+import Frankenstein from '../../../Pages/Fiction/Horror/Img/Frankenstein.jpg';
+import GreatestHitsHarlahEllisan from '../../../Pages/Fiction/Horror/Img/GreatestHitsHarlahEllisan.jpg';
+import IT from '../../../Pages/Fiction/Horror/Img/IT.jpg';
+import TheEyesAreTheBestPart from '../../../Pages/Fiction/Horror/Img/TheEyesAreTheBestPart.webp';
+import ThePictureOfDorianGray from '../../../Pages/Fiction/Horror/Img/ThePictureOfDorianGray.jpg';
+import TheShining from '../../../Pages/Fiction/Horror/Img/AtTheMountainsOfMadness.jpg';
+import InterviewWithTheVampire from '../../../Pages/Fiction/Horror/Img/InterviewWithTheVampire.jpg';
 
 export interface Book {
     id: string;

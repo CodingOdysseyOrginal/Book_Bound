@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
-import { Book } from '../Data/HomePageBook';
-
+import React, { createContext, useContext, useReducer, ReactNode } from "react";
+import { Book } from "../Data/HomePageBook";
 
 interface CartItem extends Book {
   quantity: number;
@@ -11,9 +10,9 @@ interface CartState {
 }
 
 type CartAction =
-  | { type: 'ADD_TO_CART'; payload: Book }
-  | { type: 'REMOVE_ITEM'; payload: string }
-  | { type: 'UPDATE_QUANTITY'; payload: { id: string; quantity: number } };
+  | { type: "ADD_TO_CART"; payload: Book }
+  | { type: "REMOVE_ITEM"; payload: string }
+  | { type: "UPDATE_QUANTITY"; payload: { id: string; quantity: number } };
 
 const initialState: CartState = {
   items: [],
@@ -29,7 +28,7 @@ const CartContext = createContext<{
 
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
-    case 'ADD_TO_CART': {
+    case "ADD_TO_CART": {
       const book = action.payload;
       const existingItem = state.items.find((item) => item.id === book.id);
 
@@ -50,14 +49,14 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       };
     }
 
-    case 'REMOVE_ITEM': {
+    case "REMOVE_ITEM": {
       return {
         ...state,
         items: state.items.filter((item) => item.id !== action.payload),
       };
     }
 
-    case 'UPDATE_QUANTITY': {
+    case "UPDATE_QUANTITY": {
       const { id, quantity } = action.payload;
       return {
         ...state,
@@ -72,7 +71,9 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
   }
 };
 
-export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const CartProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   return (

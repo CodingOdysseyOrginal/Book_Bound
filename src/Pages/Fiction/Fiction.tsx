@@ -1,31 +1,19 @@
 import React from "react";
 import Adventure from "./Adventure/Adventure";
-import "./Fiction.css";
 import Horror from "./Horror/Horror";
 import Romance from "./Romance/Romance";
-
-const CircleAnimation: React.FC = () => {
-  return (
-    <>
-      {[...Array(5)].map((_, index) => (
-        <div key={index} className="circle"></div>
-      ))}
-    </>
-  );
-};
+import ScienceFiction from "./ScienceFiction/ScienceFiction";
 
 const Fiction: React.FC = () => {
   return (
-    <div className="FictionContainer">
-      <div className="backgroundAnimation">
-        <CircleAnimation />
-      </div>
-      <div className="fictionTitle">
+    <div className="Container">
+      <div className="Title">
         <h1>Enjoy our range of Fiction books!!</h1>
       </div>
       <Adventure />
       <Romance />
       <Horror />
+      <ScienceFiction />
     </div>
   );
 };

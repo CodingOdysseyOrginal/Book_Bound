@@ -1,5 +1,5 @@
 import BookItem from "../../../Components/BookDesign/BookDesign";
-import { AdventureBooks } from "../../../Components/Data/AdventureBooks";
+import { AdventureBooks } from "../../../Components/Data/FictionBooks/AdventureBooks";
 import "./Adventure.css";
 
 const Adventure = () => {
