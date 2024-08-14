@@ -1,0 +1,114 @@
+.giftcards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f0f0f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .giftcards-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .giftcards-description {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 450px;
+  }
+  
+  .dropdown-container {
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  .dropdown-container select {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .dropdown-container select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  }
+  
+  .selected-card-info {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
+  }
+  
+  .selected-card-info:hover {
+    transform: translateY(-5px);
+  }
+  
+  .selected-card-info img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .selected-card-info h3 {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .add-to-cart-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none; 
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  .go-to-cart-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  
+  .go-to-cart-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
